@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisata kami - Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1 class="logo">Wisata kami</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinasi">Destinasi</a></li>
+        <li><a href="#tiket">Tiket</a></li>
+        <li><a href="#about">Kelompok</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Selamat Datang di Wisata Kami</h2>
+      <h1>Tabik Pun</h1>
+      <p>Jelajahi destinasi terbaik di Lampung dan nikmati pengalaman tak terlupakan</p>
+      <button onclick="scrollToDest()">Lihat Destinasi</button>
+    </div>
+  </section>
+
+  <!-- Destinasi -->
+  <section class="destinasi" id="destinasi">
+    <h2>Destinasi Populer</h2>
+    <div class="cards">
+      <div class="card fade-in">
+        <img src="pahawang.jpg" alt="Pantai">
+        <h3>Pantai Pahawang</h3>
+        <p>Pantai berpasir putih dengan laut biru jernih.</p>
+      </div>
+      <div class="card fade-in">
+        <img src="way kambas.jpg" alt="way kambas">
+        <h3>Way Kambas</h3>
+        <p>Petualangan melihat Gajah yang imyutt dan gemoyy.</p>
+      </div>
+      <div class="card fade-in">
+        <img src="ranau.jpg" alt="Danau">
+        <h3>Danau Ranau</h3>
+        <p>Tempat damai untuk bersantai dan menikmati alam.</p>
+      </div>
+      <div class="card fade-in">
+        <img src="krakatau.jpg" alt="Taman Hiburan">
+        <h3>Krakatau Park</h3>
+        <p>Wahana seru untuk keluarga dan teman-teman.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tiket -->
+  <section class="tiket" id="tiket">
+    <h2>Harga Tiket Setiap Destinasi</h2>
+    <div class="pricing">
+      <div class="price-card fade-in">
+        <h3>Pantai Pahawang</h3>
+        <ul>
+          <li>Dewasa: <span class="harga">Rp 50.000</span></li>
+          <li>Anak-anak: <span class="harga">Rp 25.000</span></li>
+          <li>VIP: <span class="harga">Rp 120.000</span></li>
+        </ul>
+        <button onclick="openModal()">Pesan Sekarang</button>
+      </div>
+      <div class="price-card fade-in">
+        <h3>Way Kambas</h3>
+        <ul>
+          <li>Dewasa: <span class="harga">Rp 40.000</span></li>
+          <li>Anak-anak: <span class="harga">Rp 20.000</span></li>
+          <li>VIP: <span class="harga">Rp 100.000</span></li>
+        </ul>
+        <button onclick="openModal()">Pesan Sekarang</button>
+      </div>
+      <div class="price-card fade-in">
+        <h3>Danau Ranau</h3>
+        <ul>
+          <li>Dewasa: <span class="harga">Rp 60.000</span></li>
+          <li>Anak-anak: <span class="harga">Rp 30.000</span></li>
+          <li>VIP: <span class="harga">Rp 150.000</span></li>
+        </ul>
+        <button onclick="openModal()">Pesan Sekarang</button>
+      </div>
+      <div class="price-card fade-in">
+        <h3>Krakatau Park</h3>
+        <ul>
+          <li>Dewasa: <span class="harga">Rp 100.000</span></li>
+          <li>Anak-anak: <span class="harga">Rp 50.000</span></li>
+          <li>VIP: <span class="harga">Rp 250.000</span></li>
+        </ul>
+        <button onclick="openModal()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promosi -->
+  <section class="promosi" id="promosi">
+    <h2>🎁 Promosi Spesial</h2>
+    <p>Nikmati berbagai promo menarik dari Wisata kami untuk liburanmu!</p>
+    <div class="promosi-container fade-in">
+      <div class="promosi-card">
+        <h3>Promo Akhir Pekan 🌞</h3>
+        <p>Diskon <strong>20%</strong> untuk tiket destinasi apa pun setiap Sabtu & Minggu!</p>
+        <button onclick="klaimPromo('Akhir Pekan')">Klaim Promo</button>
+      </div>
+      <div class="promosi-card">
+        <h3>Promo Liburan Sekolah 🎒</h3>
+        <p>Beli 3 tiket, gratis 1 tiket tambahan! Berlaku hingga akhir bulan.</p>
+        <button onclick="klaimPromo('Liburan Sekolah')">Klaim Promo</button>
+      </div>
+      <div class="promosi-card">
+        <h3>Promo Rombongan 🚌</h3>
+        <p>Gratis 2 tiket untuk pembelian minimal 20 tiket rombongan!</p>
+        <button onclick="klaimPromo('Rombongan')">Klaim Promo</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="slider-container">
+      <div class="slider active">
+        <img src="chairunnisa.jpg" alt="Chairunnisa">
+        <div class="caption-left">Chairunnisa</div>
+      </div>
+      <div class="slider">
+        <img src="neiza.jpg" alt="Neiza Afla Mufida">
+        <div class="caption-left">Neiza Afla Mufida</div>
+      </div>
+      <div class="slider">
+        <img src="nabila.jpg" alt="Nabila Herviati">
+        <div class="caption-left">Nabila Herviati</div>
+      </div>
+      <div class="slider">
+        <img src="talita.jpg" alt="Talita Melinda Laura Sari">
+        <div class="caption-left">Talita Melinda Laura Sari</div>
+      </div>
+
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+      <div class="dots-container"></div>
+    </div>
+
+    <!-- <div class="about-content">
+      <h2>Tentang Kami</h2>
+      <p>
+        Wisata kami menghadirkan informasi destinasi populer di Lampung.
+        Kami berkomitmen memberikan pengalaman perjalanan terbaik.
+      </p>
+    </div> -->
+  </section>
+
+
+  <!-- Kontak -->
+  <section class="contact" id="contact">
+    <h2>Hubungi Kami</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Nama" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Pesan" rows="5" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Pesan Tiket</h2>
+      <form onsubmit="submitOrder(event)">
+        <label>Nama:</label>
+        <input type="text" id="orderName" required>
+        <label>Jumlah Tiket:</label>
+        <input type="number" id="orderQty" min="1" required>
+        <label>Jenis Tiket:</label>
+        <select id="orderType">
+          <option value="Dewasa">Dewasa</option>
+          <option value="Anak-anak">Anak-anak</option>
+          <option value="VIP">VIP</option>
+        </select>
+        <button type="submit">Kirim Pesanan</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Wisata kami | Kelompok imyutt</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
